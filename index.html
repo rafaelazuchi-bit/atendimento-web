@@ -101,6 +101,17 @@
             z-index: 2;
             background: white;
         }
+
+        /* Contador de Headcount */
+        .count-badge {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 2px 10px;
+            border-radius: 999px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            border: 1px solid #e2e8f0;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-800">
@@ -320,7 +331,7 @@
             </div>
         </section>
 
-        <!-- Aba: Qualidade (NUMEROS EXPLICITOS) -->
+        <!-- Aba: Qualidade -->
         <section id="qualidade-tab" class="tab-content">
             <div class="flex flex-col items-center mt-10">
                 <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border-2 bling-border w-72 text-center relative z-10">
@@ -329,8 +340,6 @@
                 </div>
                 <div class="w-0.5 h-10 bg-slate-300"></div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-5xl px-4">
-                    
-                    <!-- Reclame Aqui -->
                     <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-[#34ad61] card-hover flex flex-col justify-between min-h-[180px]">
                         <div class="text-center">
                             <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Reclame Aqui</h4>
@@ -342,8 +351,6 @@
                             <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">04</span>
                         </div>
                     </div>
-
-                    <!-- Ouvidoria -->
                     <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-slate-800 card-hover flex flex-col justify-between min-h-[180px]">
                         <div class="text-center">
                             <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Ouvidoria</h4>
@@ -355,8 +362,6 @@
                             <span class="bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1 rounded-full">01</span>
                         </div>
                     </div>
-
-                    <!-- NPS -->
                     <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-sky-400 card-hover flex flex-col justify-between min-h-[180px]">
                         <div class="text-center">
                             <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">NPS</h4>
@@ -368,8 +373,6 @@
                             <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full">01</span>
                         </div>
                     </div>
-
-                    <!-- Atritos -->
                     <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-orange-400 card-hover flex flex-col justify-between min-h-[180px]">
                         <div class="text-center">
                             <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Atritos / Complicados</h4>
@@ -400,19 +403,11 @@
                             <p class="text-sm text-slate-500 mt-2">Gestão estratégica focada em parcerias de longo prazo e sucesso do cliente.</p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
-                                <h5 class="font-bold text-slate-800 text-sm mb-2 flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
-                                    Gerentes de Contas Dedicados
-                                </h5>
-                                <p class="text-[11px] text-gray-500 leading-relaxed">Entendimento profundo das necessidades do cliente Elite, atuando como um facilitador estratégico.</p>
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-center">
+                                <h5 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Gerentes de Contas Dedicados</h5>
                             </div>
-                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
-                                <h5 class="font-bold text-slate-800 text-sm mb-2 flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
-                                    Acompanhamento Consultivo
-                                </h5>
-                                <p class="text-[11px] text-gray-500 leading-relaxed">Foco em objetivos de negócio, expansão do uso da ferramenta e identificação de melhorias proativas.</p>
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-center">
+                                <h5 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Acompanhamento Consultivo</h5>
                             </div>
                         </div>
                         <div class="mt-6 pt-6 border-t border-slate-100 text-center">
@@ -425,8 +420,7 @@
 
         <!-- Aba: Education -->
         <section id="education-tab" class="tab-content">
-            <h2 class="text-2xl font-bold mb-10 text-center text-slate-800 uppercase tracking-widest">Estratégia de Customer Education</h2>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center mt-10">
                 <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border-2 bling-border w-72 text-center relative z-10">
                     <div class="text-[10px] font-bold bling-text mb-1 uppercase tracking-widest text-center">Coordenação Education</div>
                     <h3 class="text-lg font-bold">Manuela Martins</h3>
@@ -434,7 +428,7 @@
                 <div class="w-0.5 h-10 bg-slate-300"></div>
                 <div class="w-full max-w-6xl px-4 space-y-12">
                     <div>
-                        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 border-b border-slate-200 pb-2">Jornada de Onboarding</h4>
+                        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 border-b border-slate-200 pb-2 text-center">Jornada de Onboarding</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-white p-6 rounded-2xl shadow-sm border-l-8 border-indigo-500 card-hover">
                                 <div class="flex justify-between items-start mb-4">
@@ -461,7 +455,7 @@
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 border-b border-slate-200 pb-2">Conteúdo e Autoatendimento</h4>
+                        <h4 class="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 border-b border-slate-200 pb-2 text-center">Conteúdo e Autoatendimento</h4>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 text-center flex flex-col items-center card-hover">
                                 <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-xl mb-3">🎓</div>
