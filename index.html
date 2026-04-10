@@ -101,34 +101,6 @@
             z-index: 2;
             background: white;
         }
-
-        /* Estilos do Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.6);
-            backdrop-filter: blur(4px);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            width: 90%;
-            max-width: 800px;
-            animation: modalIn 0.3s ease-out;
-        }
-
-        @keyframes modalIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-800">
@@ -155,32 +127,26 @@
 
     <main class="max-w-[1600px] mx-auto p-4 md:p-10">
 
-        <!-- Aba: Estrutura (Organograma) -->
+        <!-- Aba: Estrutura -->
         <section id="estrutura" class="tab-content active">
             <h2 class="text-2xl md:text-3xl font-bold mb-10 text-slate-800 text-center uppercase tracking-widest">Liderança e Coordenação</h2>
-            
             <div class="org-container">
                 <div class="hidden lg:block main-spine"></div>
-
-                <!-- Thalles Paz -->
                 <div class="relative z-10 mb-8">
                     <div class="inline-block bg-slate-900 text-white p-6 rounded-2xl shadow-xl border-2 bling-border w-64 md:w-96 text-center">
                         <div class="text-[10px] font-bold bling-text mb-1 uppercase tracking-widest">Gerente Executivo de Atendimento e CS</div>
                         <h3 class="text-lg md:text-xl font-bold">Thalles Paz</h3>
                     </div>
                 </div>
-                
-                <!-- Primeira Fila -->
                 <div class="w-full max-w-6xl mx-auto relative z-10">
                     <div class="hidden lg:block w-full org-line-horizontal mb-0"></div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                         <div class="relative flex flex-col items-center">
                             <div class="hidden lg:block org-line-vertical-branch"></div>
-                            <div onclick="openModal()" class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 border-dashed hover:border-green-500 hover:bg-green-50/30 card-hover w-full text-center equal-card relative group transition-all duration-300 cursor-pointer">
-                                <div class="absolute top-1 right-1 text-[7px] bling-text font-bold opacity-0 group-hover:opacity-100 transition-opacity uppercase">Ver Detalhes</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 card-hover w-full text-center equal-card">
                                 <h4 class="font-bold text-sm text-slate-800">Cristian Rocha</h4>
-                                <p class="text-[9px] font-bold bling-text mb-2 uppercase tracking-tighter">Coord. Suporte L1/L2</p>
-                                <p class="text-[11px] text-gray-500 leading-tight">Time de Supervisores, L1 e L2.</p>
+                                <p class="text-[9px] font-bold bling-text mb-2 uppercase tracking-tighter">Coord. L1, L2 e Premium</p>
+                                <p class="text-[11px] text-gray-500 leading-tight">Gestão de Supervisores e Atendimento.</p>
                             </div>
                         </div>
                         <div class="relative flex flex-col items-center">
@@ -193,8 +159,7 @@
                         </div>
                         <div class="relative flex flex-col items-center">
                             <div class="hidden lg:block org-line-vertical-branch"></div>
-                            <div onclick="openAndreiModal()" class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 border-dashed hover:border-green-500 hover:bg-green-50/30 card-hover w-full text-center equal-card relative group transition-all duration-300 cursor-pointer">
-                                <div class="absolute top-1 right-1 text-[7px] bling-text font-bold opacity-0 group-hover:opacity-100 transition-opacity uppercase">Ver Detalhes</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 card-hover w-full text-center equal-card">
                                 <h4 class="font-bold text-sm text-slate-800">Andrei Faes</h4>
                                 <p class="text-[9px] font-bold bling-text mb-1 uppercase tracking-tighter">Supervisor de Qualidade</p>
                                 <p class="text-[10px] text-gray-500 leading-tight">Reclame Aqui e Ouvidoria.</p>
@@ -210,10 +175,7 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="h-16 hidden lg:block"></div>
-
-                <!-- Segunda Fila -->
                 <div class="w-full max-w-5xl mx-auto relative z-10">
                     <div class="hidden lg:block w-full org-line-horizontal mb-0"></div>
                     <div class="flex flex-col sm:flex-row justify-center gap-6 px-4 mt-0 sm:flex-nowrap">
@@ -248,36 +210,117 @@
 
         <!-- Aba: Suporte L1/L2 -->
         <section id="suporte-l1l2-tab" class="tab-content">
-            <h2 class="text-2xl font-bold mb-6 text-center text-slate-800 uppercase tracking-widest">Suporte L1/L2: Atendimento e Suporte Técnico</h2>
-            <p class="text-center text-slate-500 mb-10 -mt-4">Coordenação: <strong>Cristian Rocha</strong></p>
-            <div class="max-w-4xl mx-auto space-y-4">
-                <div class="flex items-center gap-6 p-6 bg-white rounded-2xl shadow-sm border-l-8 border-[#34ad61]">
-                    <div class="bling-bg text-white w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-md">L1</div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-lg">Atendimento de Primeira Linha</h4>
-                        <p class="text-sm text-gray-600">Focado em triagem inicial, dúvidas frequentes e resoluções rápidas baseadas no Portal de Ajuda. É o principal ponto de contacto síncrono e assíncrono com o cliente.</p>
-                    </div>
+            <div class="flex flex-col items-center mt-10">
+                <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border-2 bling-border w-72 text-center relative z-10">
+                    <div class="text-[10px] font-bold bling-text mb-1 uppercase tracking-widest text-center">Coordenação Geral</div>
+                    <h3 class="text-lg font-bold">Cristian Rocha</h3>
                 </div>
-                <div class="flex items-center gap-6 p-6 bg-white rounded-2xl shadow-sm border-l-8 border-sky-500">
-                    <div class="bg-sky-500 text-white w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-xl shadow-md">L2</div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-lg">Suporte Técnico</h4>
-                        <p class="text-sm text-gray-600">Escalonamento para investigação detalhada do problema. Atua onde o L1 não possui autonomia técnica ou acesso a ferramentas de diagnóstico profundo.</p>
+                <div class="w-0.5 h-10 bg-slate-300"></div>
+                <div class="w-full max-w-3xl bg-white border-2 border-slate-200 p-6 rounded-2xl shadow-md text-center relative z-10 group overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-slate-800 text-white px-4 py-1 text-[10px] font-bold rounded-bl-xl flex items-center gap-2">
+                        <span>10</span> SUPERVISORES
+                    </div>
+                    <h4 class="font-bold text-slate-800 uppercase tracking-widest text-sm mb-2">Supervisores de Operação</h4>
+                    <p class="text-xs text-slate-500 max-w-md mx-auto">Gestão direta de pessoas, escalonamento e indicadores em tempo real.</p>
+                </div>
+                <div class="w-0.5 h-10 bg-slate-300"></div>
+                <div class="hidden md:block w-[70%] h-0.5 bg-slate-300"></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0 w-full max-w-5xl px-4">
+                    <div class="relative flex flex-col items-center pt-8">
+                        <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-[#34ad61] w-full card-hover relative flex flex-col">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bling-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">L1</div>
+                                <h4 class="font-bold text-slate-800 text-sm">Suporte L1</h4>
+                            </div>
+                            <p class="text-[11px] text-gray-600 mb-6 flex-grow leading-relaxed">Primeira linha de contacto. Focado em dúvidas rápidas e triagem inicial.</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+                                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
+                                <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">120</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col items-center pt-8">
+                        <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-sky-500 w-full card-hover relative flex flex-col">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-sky-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">L2</div>
+                                <h4 class="font-bold text-slate-800 text-sm">Suporte Técnico</h4>
+                            </div>
+                            <p class="text-[11px] text-gray-600 mb-6 flex-grow leading-relaxed">Escalonamento para investigação profunda e diagnósticos complexos.</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+                                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
+                                <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full">24</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col items-center pt-8">
+                        <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-emerald-600 w-full card-hover relative flex flex-col">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">P</div>
+                                <h4 class="font-bold text-slate-800 text-sm">Suporte Premium</h4>
+                            </div>
+                            <p class="text-[11px] text-gray-600 mb-6 flex-grow leading-relaxed">Atendimento prioritário para clientes corporativos e Planos Elite.</p>
+                            <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+                                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
+                                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">15</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Aba: Suporte L3 -->
+        <!-- Aba: Suporte L3 (ATUALIZADA) -->
         <section id="suporte-l3-tab" class="tab-content">
-            <h2 class="text-2xl font-bold mb-6 text-center text-slate-800 uppercase tracking-widest">Suporte L3: Suporte Técnico Avançado</h2>
-            <p class="text-center text-slate-500 mb-10 -mt-4">Coordenação: <strong>Rafaela Sperotto</strong></p>
-            <div class="max-w-4xl mx-auto">
-                <div class="flex items-center gap-6 p-8 bg-white rounded-2xl shadow-sm border-l-8 border-slate-800">
-                    <div class="bg-slate-800 text-white w-16 h-16 rounded-full flex-shrink-0 flex items-center justify-center font-bold text-2xl shadow-md">L3</div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-xl mb-2">Suporte Técnico Avançado</h4>
-                        <p class="text-base text-gray-600 leading-relaxed">Conexão direta com o time de Produto e Desenvolvimento. Responsável por criação e acompanhamento de incidentes, análise de chamados para sugestões de melhorias e resolução de bugs críticos.</p>
+            <div class="flex flex-col items-center mt-10">
+                <!-- Coordenação L3 -->
+                <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border-2 border-slate-700 w-72 text-center relative z-10">
+                    <div class="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Coordenação L3</div>
+                    <h3 class="text-lg font-bold">Rafaela Sperotto</h3>
+                </div>
+
+                <div class="w-0.5 h-10 bg-slate-300"></div>
+
+                <!-- Card Hub L3 com Headcount -->
+                <div class="w-full max-w-3xl bg-white border-2 border-slate-200 p-8 rounded-2xl shadow-md text-center relative z-10 overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-slate-800 text-white px-5 py-1.5 text-[10px] font-bold rounded-bl-xl">
+                        08 COLABORADORES
+                    </div>
+                    <div class="flex justify-center gap-4 mb-4">
+                        <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-[10px] font-bold">HUB PRODUTO</span>
+                        <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-[10px] font-bold">HUB DEV</span>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xl mb-3">Suporte Técnico Avançado</h4>
+                    <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                        Responsáveis por gerir incidentes críticos e monitorar as principais dores que chegam ao suporte, atuando como o elo estratégico entre a operação de atendimento e os times de engenharia.
+                    </p>
+                </div>
+
+                <div class="w-0.5 h-10 bg-slate-300"></div>
+
+                <!-- Divisão por Segmentos -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl px-4">
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-slate-800 shadow-sm card-hover text-center">
+                        <div class="text-xl mb-2">⚖️</div>
+                        <h5 class="font-bold text-slate-800 text-xs uppercase tracking-widest mb-1">Fiscal</h5>
+                        <p class="text-[10px] text-gray-500 leading-tight">Tributação e Notas Fiscais.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-slate-800 shadow-sm card-hover text-center">
+                        <div class="text-xl mb-2">📦</div>
+                        <h5 class="font-bold text-slate-800 text-xs uppercase tracking-widest mb-1">ERP</h5>
+                        <p class="text-[10px] text-gray-500 leading-tight">Processos de Gestão e Core.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-slate-800 shadow-sm card-hover text-center">
+                        <div class="text-xl mb-2">🔌</div>
+                        <h5 class="font-bold text-slate-800 text-xs uppercase tracking-widest mb-1">Integrações API</h5>
+                        <p class="text-[10px] text-gray-500 leading-tight">Ecossistema e Desenvolvedores.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-slate-800 shadow-sm card-hover text-center">
+                        <div class="text-xl mb-2">💰</div>
+                        <h5 class="font-bold text-slate-800 text-xs uppercase tracking-widest mb-1">Finanças / Bling Conta</h5>
+                        <p class="text-[10px] text-gray-500 leading-tight">Serviços Financeiros e Banking.</p>
                     </div>
                 </div>
             </div>
@@ -286,109 +329,41 @@
         <!-- Aba: Qualidade -->
         <section id="qualidade-tab" class="tab-content">
             <h2 class="text-2xl font-bold mb-6 text-center text-slate-800 uppercase tracking-widest">Qualidade e Ouvidoria</h2>
-            <p class="text-center text-slate-500 mb-10 -mt-4">Supervisão: <strong>Andrei Faes</strong></p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white p-10 rounded-2xl shadow-sm border-b-4 bling-border flex flex-col items-center">
-                    <div class="text-6xl font-black bling-text mb-2">10</div>
-                    <h4 class="font-bold text-slate-800 text-xl">Reclame Aqui</h4>
-                    <p class="text-sm text-gray-500 text-center mt-2">Foco na reputação e nota da marca em canais externos.</p>
+                    <div class="text-6xl font-black bling-text">10</div>
+                    <h4 class="font-bold text-slate-800 mt-2">Reclame Aqui</h4>
                 </div>
                 <div class="bg-white p-10 rounded-2xl shadow-sm border-b-4 border-slate-800 flex flex-col items-center">
-                    <div class="text-6xl font-black text-slate-800 mb-2">05</div>
-                    <h4 class="font-bold text-slate-800 text-xl">Ouvidoria</h4>
-                    <p class="text-sm text-gray-500 text-center mt-2">Tratativa de casos críticos e mediação de conflitos.</p>
+                    <div class="text-6xl font-black text-slate-800">05</div>
+                    <h4 class="font-bold text-slate-800 mt-2">Ouvidoria</h4>
                 </div>
             </div>
         </section>
 
         <!-- Aba: CSM -->
         <section id="csm-tab" class="tab-content">
-            <h2 class="text-2xl font-bold mb-6 text-center text-slate-800 uppercase tracking-widest">Customer Success Management</h2>
-            <p class="text-center text-slate-500 mb-10 -mt-4">Coordenação: <strong>Karen Miranda</strong></p>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-emerald-500">
-                    <h4 class="font-bold text-slate-800 text-lg mb-3">Plano Elite</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed">Gestão estratégica da carteira de clientes premium, focando em retenção, satisfação e crescimento.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-emerald-700">
-                    <h4 class="font-bold text-slate-800 text-lg mb-3">Health Score</h4>
-                    <p class="text-sm text-gray-600 leading-relaxed">Acompanhamento rigoroso da saúde do cliente na plataforma para prevenir o Churn.</p>
-                </div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-slate-800 uppercase tracking-widest">CSM</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-sm border-l-8 border-emerald-500 text-center">
+                <h4 class="font-bold text-slate-800 text-xl">Plano Elite</h4>
+                <p class="text-gray-600 mt-2">Gestão estratégica de carteira, sucesso do cliente e prevenção ativa de Churn.</p>
             </div>
         </section>
 
         <!-- Aba: Education -->
         <section id="education-tab" class="tab-content">
-            <h2 class="text-2xl font-bold mb-6 text-center text-slate-800 uppercase tracking-widest">Customer Education</h2>
-            <p class="text-center text-slate-500 mb-10 -mt-4">Coordenação: <strong>Manuela Martins</strong></p>
-            <div class="max-w-4xl mx-auto space-y-6">
-                <div class="flex gap-6 p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
-                    <div class="text-4xl">🎓</div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-xl mb-1">Onboarding</h4>
-                        <p class="text-gray-500">Implantações guiadas para garantir que o cliente utilize o sistema com excelência desde o primeiro dia.</p>
-                    </div>
-                </div>
-                <div class="flex gap-6 p-8 bg-white rounded-2xl shadow-sm border border-slate-100">
-                    <div class="text-4xl">📖</div>
-                    <div>
-                        <h4 class="font-bold text-slate-800 text-xl mb-1">Conteúdo Estratégico</h4>
-                        <p class="text-gray-500">Gestão do Portal de Ajuda e base de conhecimento para o autoatendimento eficiente.</p>
-                    </div>
-                </div>
+            <h2 class="text-2xl font-bold mb-6 text-center text-slate-800 uppercase tracking-widest">Education</h2>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-sm border-l-8 border-slate-300 text-center">
+                <h4 class="font-bold text-slate-800 text-xl">Onboarding e Base de Conhecimento</h4>
+                <p class="text-gray-600 mt-2">Garantia da melhor experiência educacional e autonomia do cliente desde o primeiro contato.</p>
             </div>
         </section>
 
     </main>
 
-    <!-- Modais Interativos -->
-    <!-- Modal Cristian (L1/L2) -->
-    <div id="cristianModal" class="modal" onclick="closeModal(event)">
-        <div class="modal-content text-center" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold bling-text">Coordenação L1/L2</h2>
-                <button onclick="closeModal(null)" class="text-slate-400 hover:text-red-500 text-2xl font-bold">&times;</button>
-            </div>
-            <p class="text-slate-500 text-sm mb-8 italic">Responsável: Cristian Rocha</p>
-            <div class="flex flex-col items-center space-y-4">
-                <div class="bg-slate-800 text-white p-4 rounded-xl shadow-md w-full max-sm">
-                    <h4 class="font-bold uppercase tracking-widest text-xs mb-1 text-green-400">Suporte L1</h4>
-                    <p class="text-lg">Atendimento e Triagem</p>
-                </div>
-                <div class="h-6 w-0.5 bg-slate-200"></div>
-                <div class="bg-white border-2 bling-border p-4 rounded-xl shadow-sm w-full max-w-md">
-                    <h4 class="font-bold uppercase tracking-widest text-xs mb-1 bling-text">Suporte L2</h4>
-                    <p class="text-lg font-semibold">Suporte Técnico</p>
-                    <p class="text-[10px] text-slate-500 mt-1 px-4">Escalonamento para investigação técnica detalhada.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Andrei (Qualidade) -->
-    <div id="andreiModal" class="modal" onclick="closeAndreiModal(event)">
-        <div class="modal-content text-center" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold bling-text">Células de Qualidade</h2>
-                <button onclick="closeAndreiModal(null)" class="text-slate-400 hover:text-red-500 text-2xl font-bold">&times;</button>
-            </div>
-            <p class="text-slate-500 text-sm mb-8 italic">Responsável: Andrei Faes</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white border-2 border-slate-100 p-8 rounded-2xl shadow-sm flex flex-col items-center">
-                    <div class="text-5xl font-black bling-text">10</div>
-                    <p class="font-bold mt-2">Reclame Aqui</p>
-                </div>
-                <div class="bg-white border-2 border-slate-100 p-8 rounded-2xl shadow-sm flex flex-col items-center">
-                    <div class="text-5xl font-black text-slate-800">05</div>
-                    <p class="font-bold mt-2">Ouvidoria</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer class="mt-16 py-8 bg-slate-900 text-white text-center">
-        <div class="opacity-80 flex items-center justify-center gap-2 mb-1 font-bold">
-             Atendimento e CS <span class="bling-text">Bling</span>
+        <div class="opacity-80 flex items-center justify-center gap-2 mb-1 font-bold uppercase tracking-widest">
+             Operação Atendimento e CS <span class="bling-text">Bling</span>
         </div>
     </footer>
 
@@ -396,34 +371,10 @@
         function showTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-            
             const activeTab = document.getElementById(tabId);
             if (activeTab) activeTab.classList.add('active');
-            
             const activeBtn = document.getElementById('btn-' + tabId);
             if (activeBtn) activeBtn.classList.add('active');
-        }
-
-        function openModal() {
-            document.getElementById('cristianModal').style.display = 'block';
-            document.body.style.overflow = 'hidden'; 
-        }
-        function closeModal(event) {
-            if (!event || event.target.id === 'cristianModal' || event === null) {
-                document.getElementById('cristianModal').style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        function openAndreiModal() {
-            document.getElementById('andreiModal').style.display = 'block';
-            document.body.style.overflow = 'hidden'; 
-        }
-        function closeAndreiModal(event) {
-            if (!event || event.target.id === 'andreiModal' || event === null) {
-                document.getElementById('andreiModal').style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
         }
     </script>
 </body>
