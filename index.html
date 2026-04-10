@@ -101,17 +101,6 @@
             z-index: 2;
             background: white;
         }
-
-        /* Contador de Headcount */
-        .count-badge {
-            background: #f1f5f9;
-            color: #475569;
-            padding: 2px 10px;
-            border-radius: 999px;
-            font-size: 0.65rem;
-            font-weight: 700;
-            border: 1px solid #e2e8f0;
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-800">
@@ -240,7 +229,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0 w-full max-w-5xl px-4">
                     <div class="relative flex flex-col items-center pt-8">
                         <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-[#34ad61] w-full card-hover relative flex flex-col">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-[#34ad61] w-full card-hover relative flex flex-col min-h-[140px] justify-between">
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="bling-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">L1</div>
                                 <h4 class="font-bold text-slate-800 text-sm">Suporte L1</h4>
@@ -248,13 +237,13 @@
                             <p class="text-[11px] text-gray-600 mb-6 flex-grow leading-relaxed">Primeira linha de contacto. Focado em dúvidas rápidas e triagem inicial.</p>
                             <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
                                 <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
-                                <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">120</span>
+                                <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">+ de 150</span>
                             </div>
                         </div>
                     </div>
                     <div class="relative flex flex-col items-center pt-8">
                         <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-sky-500 w-full card-hover relative flex flex-col">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-sky-500 w-full card-hover relative flex flex-col min-h-[140px] justify-between">
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="bg-sky-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">L2</div>
                                 <h4 class="font-bold text-slate-800 text-sm">Suporte Técnico</h4>
@@ -268,7 +257,7 @@
                     </div>
                     <div class="relative flex flex-col items-center pt-8">
                         <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-emerald-600 w-full card-hover relative flex flex-col">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-emerald-600 w-full card-hover relative flex flex-col min-h-[140px] justify-between">
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm">P</div>
                                 <h4 class="font-bold text-slate-800 text-sm">Suporte Premium</h4>
@@ -276,7 +265,7 @@
                             <p class="text-[11px] text-gray-600 mb-6 flex-grow leading-relaxed">Atendimento prioritário para clientes corporativos e Planos Elite.</p>
                             <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
                                 <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
-                                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">15</span>
+                                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">+ 20</span>
                             </div>
                         </div>
                     </div>
@@ -288,7 +277,7 @@
         <section id="suporte-l3-tab" class="tab-content">
             <div class="flex flex-col items-center mt-10">
                 <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border-2 bling-border w-72 text-center relative z-10">
-                    <div class="text-[10px] font-bold bling-text mb-1 uppercase tracking-widest text-center">Coordenação L3</div>
+                    <div class="text-[10px] font-bold bling-text mb-1 uppercase tracking-widest">Coordenação L3</div>
                     <h3 class="text-lg font-bold">Rafaela Sperotto</h3>
                 </div>
                 <div class="w-0.5 h-10 bg-slate-300"></div>
@@ -307,22 +296,22 @@
                 </div>
                 <div class="w-0.5 h-10 bg-slate-300"></div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-5xl px-4">
-                    <div class="bg-white p-5 rounded-xl border-l-4 border-slate-800 shadow-sm card-hover text-center">
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-[#34ad61] shadow-sm card-hover text-center">
                         <div class="text-xl mb-2">⚖️</div>
                         <h5 class="font-bold text-slate-800 text-xs uppercase tracking-widest mb-1">Fiscal</h5>
                         <p class="text-[10px] text-gray-500 leading-tight">Tributação e Notas Fiscais.</p>
                     </div>
-                    <div class="bg-white p-5 rounded-xl border-l-4 border-slate-800 shadow-sm card-hover text-center">
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-[#34ad61] shadow-sm card-hover text-center">
                         <div class="text-xl mb-2">📦</div>
                         <h5 class="font-bold text-slate-800 text-xs uppercase tracking-widest mb-1">ERP</h5>
                         <p class="text-[10px] text-gray-500 leading-tight">Processos de Gestão e Core.</p>
                     </div>
-                    <div class="bg-white p-5 rounded-xl border-l-4 border-slate-800 shadow-sm card-hover text-center">
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-[#34ad61] shadow-sm card-hover text-center">
                         <div class="text-xl mb-2">🔌</div>
                         <h5 class="font-bold text-slate-800 text-xs uppercase tracking-widest mb-1">Integrações API</h5>
                         <p class="text-[10px] text-gray-500 leading-tight">Ecossistema e Desenvolvedores.</p>
                     </div>
-                    <div class="bg-white p-5 rounded-xl border-l-4 border-slate-800 shadow-sm card-hover text-center">
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-[#34ad61] shadow-sm card-hover text-center">
                         <div class="text-xl mb-2">💰</div>
                         <h5 class="font-bold text-slate-800 text-xs uppercase tracking-widest mb-1">Finanças / Bling Conta</h5>
                         <p class="text-[10px] text-gray-500 leading-tight">Serviços Financeiros e Banking.</p>
@@ -331,7 +320,7 @@
             </div>
         </section>
 
-        <!-- Aba: Qualidade -->
+        <!-- Aba: Qualidade (NUMEROS EXPLICITOS) -->
         <section id="qualidade-tab" class="tab-content">
             <div class="flex flex-col items-center mt-10">
                 <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border-2 bling-border w-72 text-center relative z-10">
@@ -340,29 +329,57 @@
                 </div>
                 <div class="w-0.5 h-10 bg-slate-300"></div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-5xl px-4">
-                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-[#34ad61] card-hover text-center relative overflow-hidden">
-                        <div class="text-4xl font-black bling-text mb-1">04</div>
-                        <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Reclame Aqui</h4>
-                        <p class="text-[10px] text-slate-400 mt-1 uppercase font-bold">Tempo Integral</p>
-                        <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Gestão ativa da reputação e respostas oficiais em portais externos.</p>
+                    
+                    <!-- Reclame Aqui -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-[#34ad61] card-hover flex flex-col justify-between min-h-[180px]">
+                        <div class="text-center">
+                            <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Reclame Aqui</h4>
+                            <p class="text-[10px] text-slate-400 mt-1 uppercase font-bold">Tempo Integral</p>
+                            <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Gestão ativa da reputação e respostas oficiais em portais externos.</p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
+                            <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">04</span>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-slate-800 card-hover text-center relative overflow-hidden">
-                        <div class="text-4xl font-black text-slate-800 mb-1">01</div>
-                        <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Ouvidoria</h4>
-                        <p class="text-[10px] text-slate-400 mt-1 uppercase font-bold">Tempo Integral</p>
-                        <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Última instância interna para resolução de conflitos e reclamações críticas.</p>
+
+                    <!-- Ouvidoria -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-slate-800 card-hover flex flex-col justify-between min-h-[180px]">
+                        <div class="text-center">
+                            <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Ouvidoria</h4>
+                            <p class="text-[10px] text-slate-400 mt-1 uppercase font-bold">Tempo Integral</p>
+                            <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Última instância interna para resolução de conflitos e reclamações críticas.</p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
+                            <span class="bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1 rounded-full">01</span>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-sky-400 card-hover text-center relative overflow-hidden">
-                        <div class="text-4xl font-black text-sky-400 mb-1">01</div>
-                        <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">NPS</h4>
-                        <p class="text-[10px] text-sky-600 mt-1 uppercase font-bold">Compartilhada com RA</p>
-                        <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Análise de satisfação e tratamento de feedbacks de clientes detratores.</p>
+
+                    <!-- NPS -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-sky-400 card-hover flex flex-col justify-between min-h-[180px]">
+                        <div class="text-center">
+                            <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">NPS</h4>
+                            <p class="text-[10px] text-sky-600 mt-1 uppercase font-bold">Compartilhada com RA</p>
+                            <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Análise de satisfação e tratamento de feedbacks de clientes detratores.</p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
+                            <span class="bg-sky-100 text-sky-700 text-xs font-bold px-3 py-1 rounded-full">01</span>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-orange-400 card-hover text-center relative overflow-hidden">
-                        <div class="text-4xl font-black text-orange-400 mb-1">01</div>
-                        <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Atritos / Complicados</h4>
-                        <p class="text-[10px] text-orange-600 mt-1 uppercase font-bold">Compartilhada com RA</p>
-                        <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Atuação em casos de alta complexidade e negociações sensíveis.</p>
+
+                    <!-- Atritos -->
+                    <div class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-orange-400 card-hover flex flex-col justify-between min-h-[180px]">
+                        <div class="text-center">
+                            <h4 class="font-bold text-slate-800 text-sm uppercase tracking-widest">Atritos / Complicados</h4>
+                            <p class="text-[10px] text-orange-600 mt-1 uppercase font-bold">Compartilhada com RA</p>
+                            <p class="text-xs text-gray-500 mt-4 leading-relaxed italic">Atuação em casos de alta complexidade e negociações sensíveis.</p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Colaboradores</span>
+                            <span class="bg-orange-100 text-orange-700 text-xs font-bold px-3 py-1 rounded-full">01</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -476,30 +493,21 @@
             </div>
         </section>
 
-        <!-- Aba: Comercial (ATUALIZADA COM OPERAÇÕES) -->
+        <!-- Aba: Comercial -->
         <section id="comercial-tab" class="tab-content">
             <div class="flex flex-col items-center mt-10">
-                <!-- Cabeçalho Único: Vinicius Rodrigues -->
                 <div class="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border-2 bling-border w-72 text-center relative z-10">
                     <div class="text-[10px] font-bold bling-text mb-1 uppercase tracking-widest text-center">Coordenação Comercial</div>
                     <h3 class="text-lg font-bold">Vinicius Rodrigues</h3>
                 </div>
-
                 <div class="w-0.5 h-10 bg-slate-300"></div>
-
-                <!-- Card Comprido: Estrutura de Operações -->
                 <div class="w-full max-w-4xl bg-white border-2 border-slate-200 p-6 rounded-2xl shadow-md text-center relative z-10">
                     <h4 class="font-bold text-slate-800 uppercase tracking-widest text-sm mb-1">Estrutura de Operações Comerciais</h4>
                     <p class="text-xs text-slate-500">Gestão dos canais de vendas, logística e suporte operacional estratégico.</p>
                 </div>
-
                 <div class="w-0.5 h-10 bg-slate-300"></div>
                 <div class="hidden md:block w-[75%] h-0.5 bg-slate-300"></div>
-
-                <!-- Grid das Operações (Agora com 3 colunas) -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0 w-full max-w-6xl px-4">
-                    
-                    <!-- Melhor Envio -->
                     <div class="relative flex flex-col items-center pt-8">
                         <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
                         <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-[#34ad61] w-full card-hover text-center">
@@ -510,8 +518,6 @@
                             </p>
                         </div>
                     </div>
-
-                    <!-- Loja Virtual -->
                     <div class="relative flex flex-col items-center pt-8">
                         <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
                         <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-slate-800 w-full card-hover text-center">
@@ -522,8 +528,6 @@
                             </p>
                         </div>
                     </div>
-
-                    <!-- Operações (NOVO CARD) -->
                     <div class="relative flex flex-col items-center pt-8">
                         <div class="hidden md:block absolute top-0 w-0.5 h-8 bg-slate-300"></div>
                         <div class="bg-white p-6 rounded-2xl shadow-sm border-t-8 border-sky-500 w-full card-hover text-center">
@@ -534,7 +538,6 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
